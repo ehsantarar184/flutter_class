@@ -27,9 +27,15 @@ class MyApp extends StatelessWidget {
 
             body: Center(
               child: FlatButton(
+                padding: EdgeInsets.all(10.0),
+                highlightColor: Colors.greenAccent,
+                splashColor: Colors.cyan,
                 onPressed: (){},
                 child: Text(
-                  "Button"
+                  "Button",
+                      style: TextStyle(
+                    fontSize: 30.0
+                ),
               ),
               ),
               // child: Text("Ehsan Ullah",
