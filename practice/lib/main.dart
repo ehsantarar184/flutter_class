@@ -25,7 +25,11 @@ class MyApp extends StatelessWidget {
                   fontStyle: FontStyle.italic,
                   fontSize: 40.0,
                   wordSpacing: 20.0,
-                  background: Paint()..color=Colors.black..style=PaintingStyle.stroke,
+                  decoration: TextDecoration.underline,
+                  decorationColor: Colors.amber,
+                  decorationStyle: TextDecorationStyle.dashed,
+                  letterSpacing: 20.0,
+                  // background: Paint()..color=Colors.black..style=PaintingStyle.stroke,
                 ),
 
               ),
