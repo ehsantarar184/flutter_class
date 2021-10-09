@@ -15,25 +15,39 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text("My APP"),
-            ),
-            body: Center(
-              child: Text("Ehsan Ullah",
-                style: TextStyle(
-                  color: Colors.tealAccent,
-                  fontWeight: FontWeight.bold,
-                  fontStyle: FontStyle.italic,
+              title: Text("My APP",
+              textAlign: TextAlign.center,
+              style: TextStyle(
                   fontSize: 40.0,
-                  wordSpacing: 20.0,
-                  decoration: TextDecoration.underline,
-                  decorationColor: Colors.amber,
-                  decorationStyle: TextDecorationStyle.dashed,
-                  letterSpacing: 20.0,
-                  fontFamily: "Times New Roman"
-                  // background: Paint()..color=Colors.black..style=PaintingStyle.stroke,
-                ),
+                color: Colors.lightGreen,
 
               ),
+            ),
+              ),
+
+            body: Center(
+              child: FlatButton(
+                onPressed: (){},
+                child: Text(
+                  "Button"
+              ),
+              ),
+              // child: Text("Ehsan Ullah",
+              //   style: TextStyle(
+              //     color: Colors.tealAccent,
+              //     fontWeight: FontWeight.bold,
+              //     fontStyle: FontStyle.italic,
+              //     fontSize: 40.0,
+              //     wordSpacing: 20.0,
+              //     decoration: TextDecoration.underline,
+              //     decorationColor: Colors.amber,
+              //     decorationStyle: TextDecorationStyle.dashed,
+              //     letterSpacing: 20.0,
+              //     fontFamily: "Times New Roman"
+              //     // background: Paint()..color=Colors.black..style=PaintingStyle.stroke,
+              //   ),
+              //
+              // ),
             )
         )
     );
