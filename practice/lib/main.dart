@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         ),
         home: Scaffold(
             appBar: AppBar(
-              title: Text("My APP",
+              title: const Text("My APP",
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 40.0,
@@ -26,11 +26,11 @@ class MyApp extends StatelessWidget {
               ),
             body: Center(
               child: RaisedButton(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         highlightColor: Colors.greenAccent,
         splashColor: Colors.cyan,
         onPressed: (){},
-        child: Text(
+        child: const Text(
           "Button",
               style: TextStyle(
             fontSize: 30.0
