@@ -24,20 +24,33 @@ class MyApp extends StatelessWidget {
               ),
             ),
               ),
-
             body: Center(
-              child: FlatButton(
-                padding: EdgeInsets.all(10.0),
-                highlightColor: Colors.greenAccent,
-                splashColor: Colors.cyan,
-                onPressed: (){},
-                child: Text(
-                  "Button",
-                      style: TextStyle(
-                    fontSize: 30.0
-                ),
-              ),
-              ),
+              child: RaisedButton(
+        padding: EdgeInsets.all(10.0),
+        highlightColor: Colors.greenAccent,
+        splashColor: Colors.cyan,
+        onPressed: (){},
+        child: Text(
+          "Button",
+              style: TextStyle(
+            fontSize: 30.0
+        ),
+      ),
+      ),
+
+            // body: Center(
+            //   child: FlatButton(
+            //     padding: EdgeInsets.all(10.0),
+            //     highlightColor: Colors.greenAccent,
+            //     splashColor: Colors.cyan,
+            //     onPressed: (){},
+            //     child: Text(
+            //       "Button",
+            //           style: TextStyle(
+            //         fontSize: 30.0
+            //     ),
+            //   ),
+            //   ),
               // child: Text("Ehsan Ullah",
               //   style: TextStyle(
               //     color: Colors.tealAccent,
