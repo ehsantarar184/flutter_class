@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,7 +8,6 @@ void main() {
     home: homePage(),
   ));
 }
-
 class homePage extends StatefulWidget {
   const homePage({Key? key}) : super(key: key);
   @override
