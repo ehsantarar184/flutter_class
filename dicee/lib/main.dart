@@ -23,7 +23,22 @@ class _homePageState extends State<homePage> {
   int pls2 = 0;
   int pls3 = 0;
   int pls4 = 0;
+  int i=0;
+int  consecutiveTaps=0;
+  String result = "";
   @override
+  void rollDice() {
+    setState(() {
+
+      if (pls1 > pls2) {
+        result = "Player 1 Wins";
+      } else if (pls2 > pls1) {
+        result = "Player 2 Wins";
+      } else {
+        result = "Draw";
+      }
+    });
+  }
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
@@ -56,6 +71,7 @@ class _homePageState extends State<homePage> {
                     setState(() {
                       num1 = Random().nextInt(6) + 1;
                       pls1 += num1;
+
                     });
                   },
                   child: Image.asset(
@@ -120,6 +136,7 @@ class _homePageState extends State<homePage> {
                     "images/dice$num4.png",
                     height: 150,
                     width: 150,
+
                   ),
                 ),
               ],
@@ -139,12 +156,20 @@ class _homePageState extends State<homePage> {
                     "Player 4",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                   ),
+
                 )
               ],
             ),
+    Text(
+    result,
+    style: TextStyle(
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+    fontSize: 20,
+    ),
 
 
-
+),
           ],
         ),
       ),
