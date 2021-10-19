@@ -37,7 +37,9 @@ class _DicepageState extends State<Dicepage> {
   int player3term = 0;
   int player4term = 0;
   int counter=10;
-
+  late int f1;
+  late int f2;
+  late int f3;
 
 
   Widget build(BuildContext context) {
@@ -49,13 +51,22 @@ class _DicepageState extends State<Dicepage> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                    if (player1term <= 10)
-                    number1 = Random().nextInt(6) + 1;
-                    player1term = player1term + 1;
-                    print("player1term$player1term");
-                    print(number1);
-                    resplayer1=resplayer1+number1;
-                    counter = counter + 1;
+                    if (player1term <= 10) {
+                      number1 = Random().nextInt(6) + 1;
+                      player1term = player1term + 1;
+                      print("player1term$player1term");
+                      print(number1);
+                      resplayer1=resplayer1+number1;
+                      // counter = counter + 1;
+
+                    }
+                    // if (player1term <= 10)
+                    // number1 = Random().nextInt(6) + 1;
+                    // player1term = player1term + 1;
+                    // print("player1term$player1term");
+                    // print(number1);
+                    // resplayer1=resplayer1+number1;
+                    // counter = counter + 1;
 
 
                   }
@@ -73,6 +84,8 @@ class _DicepageState extends State<Dicepage> {
             const SizedBox(
               width: 12,
             ),
+
+
             Expanded(
               child: GestureDetector(
                 onTap: () {
@@ -107,6 +120,7 @@ class _DicepageState extends State<Dicepage> {
         Text("Player 2 score: $resplayer2"),
         Text("Player 3 score: $resplayer3"),
         Text("Player 4 score: $resplayer4"),
+
         Row(
           children: [
             Expanded(
@@ -165,13 +179,15 @@ class _DicepageState extends State<Dicepage> {
           ],
         ),
 
-
-
-
+          // if(resplayer1>resplayer2)
+          //   f1=resplayer1;
+          // if(resplayer3>resplayer4)
+          //
 
 
       ],
     );
+
   }
 }
 
