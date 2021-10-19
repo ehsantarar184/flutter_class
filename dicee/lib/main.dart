@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class _homePageState extends State<homePage> {
   int pls3 = 0;
   int pls4 = 0;
   int global=11;
+  int pressed=10;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,12 +56,19 @@ class _homePageState extends State<homePage> {
             ),
             Row(
               children: [
-                GestureDetector(
+                Flexible(
+                  flex: 10,
+                  child:    GestureDetector(
                   onTap: () {
                     setState(() {
-                     global=global-1;
+
+                      // global=global-1;
                       num1 = Random().nextInt(6) + 1;
                       pls1 += num1;
+
+                      // print(num1);
+                      // global=global-1;
+
                     });
                   },
                   child: Image.asset(
@@ -67,16 +76,22 @@ class _homePageState extends State<homePage> {
                     height: 150,
                     width: 150,
                   ),
-                ),
+                ),),
+
+
                 SizedBox(
                   width: 100,
                 ),
                 GestureDetector(
                   onTap: () {
                     setState(() {
-                      num2 = Random().nextInt(6) + 1;
-                      pls2 += num2;
-                    });
+                      // if (pls2 <= 4) {
+                        num2 = Random().nextInt(6) + 1;
+                        pls2 += num2;
+                        global = global - 1;
+                      
+                    }
+                      );
                   },
                   child: Image.asset(
                     "images/dice$num2.png",
@@ -94,6 +109,7 @@ class _homePageState extends State<homePage> {
             Text("Player 2 score: $pls2"),
             Text("Player 3 score: $pls3"),
             Text("Player 4 score: $pls4"),
+             Text("$GestureDetector"),
 
             Row(
               children: [
