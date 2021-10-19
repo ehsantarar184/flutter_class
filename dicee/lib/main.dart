@@ -18,30 +18,6 @@ void main() {
     ),
   );
 }
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: SplashScreen(),
-    );
-  }
-}
-
-class SplashScreen extends StatefulWidget {
-  @override
-  _SplashScreenState createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    Timer(Duration(seconds: 3), () {
-      Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (_) => MyApp()));
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             // logo here
             Image.asset(
-              'assets/images/logo.png',
+              'assets/images/dice1.png',
               height: 120,
             ),
             SizedBox(
@@ -67,7 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-}
+
 class dice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
