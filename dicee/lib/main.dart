@@ -83,7 +83,6 @@ class _DicepageState extends State<Dicepage> {
                     if (player2term <= 10) {
                       number2 = Random().nextInt(6) + 1;
                       player2term = player2term + 1;
-
                       print("player2term$player2term");
                       print(number2);
                       resplayer2=resplayer2+number2;
@@ -104,6 +103,10 @@ class _DicepageState extends State<Dicepage> {
         const SizedBox(
           height: 12,
         ),
+        Text("Player 1 score: $resplayer1"),
+        Text("Player 2 score: $resplayer2"),
+        Text("Player 3 score: $resplayer3"),
+        Text("Player 4 score: $resplayer4"),
         Row(
           children: [
             Expanded(
