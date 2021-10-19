@@ -1,193 +1,657 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.red[900],
+        backgroundColor: Colors.green,
         appBar: AppBar(
-          title: Text("Dice App"),
+          centerTitle: true,
+          title: Text('Dicee'),
+          backgroundColor: Colors.green,
         ),
-        body: Dicepage(),
+        body: DicePage(),
       ),
     ),
   );
 }
 
-class Dicepage extends StatefulWidget {
-  const Dicepage({Key? key}) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
-  _DicepageState createState() => _DicepageState();
-}
-
-class _DicepageState extends State<Dicepage> {
-  int number1 = 1;
-  int number2 = 1;
-  int number3 = 1;
-  int number4 = 1;
-  int resplayer1=0;
-  int resplayer2=0;
-  int resplayer3=0;
-  int resplayer4=0;
-  int player1term = 0;
-  int player2term = 0;
-  int player3term = 0;
-  int player4term = 0;
-  int counter=10;
-  late int f1;
-  late int f2;
-  late int f3;
-
-
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    if (player1term <= 10) {
-                      number1 = Random().nextInt(6) + 1;
-                      player1term = player1term + 1;
-                      print("player1term$player1term");
-                      print(number1);
-                      resplayer1=resplayer1+number1;
-                      // counter = counter + 1;
-
-                    }
-                    // if (player1term <= 10)
-                    // number1 = Random().nextInt(6) + 1;
-                    // player1term = player1term + 1;
-                    // print("player1term$player1term");
-                    // print(number1);
-                    // resplayer1=resplayer1+number1;
-                    // counter = counter + 1;
-
-
-                  }
-
-                  );
-
-                },
-                child: Image(
-                  image: AssetImage("images/dice$number1.png"),
-                  height: 150,
-                  width: 150,
-                ),
-              ),
-            ),
-            const SizedBox(
-              width: 12,
-            ),
-
-
-            Expanded(
-              child: GestureDetector(
-                onTap: () {
-
-
-                  setState(() {
-
-                    if (player2term <= 10) {
-                      number2 = Random().nextInt(6) + 1;
-                      player2term = player2term + 1;
-                      print("player2term$player2term");
-                      print(number2);
-                      resplayer2=resplayer2+number2;
-                      counter = counter + 1;
-
-                    }});
-                  },
-
-                child: Image(
-                  image: AssetImage("images/dice$number2.png"),
-                  height: 150,
-                  width: 150,
-                ),
-              ),
-            )
-          ],
-        ),
-        const SizedBox(
-          height: 12,
-        ),
-        Text("Player 1 score: $resplayer1"),
-        Text("Player 2 score: $resplayer2"),
-        Text("Player 3 score: $resplayer3"),
-        Text("Player 4 score: $resplayer4"),
-
-        Row(
-          children: [
-            Expanded(
-              child: GestureDetector(
-                onTap: () {
-
-
-                  setState(() {
-    if (player3term <= 10) {
-    number3 = Random().nextInt(6) + 1;
-    player3term = player3term + 1;
-    print("player3term$player3term");
-    print(number3);
-    resplayer3=resplayer3+number3;
-    counter = counter + 1;
-
-    }
-    }
-                    );
-                  },
-
-                child: Image(
-                  image: AssetImage("images/dice$number3.png"),
-                  height: 150,
-                  width: 150,
-                ),
-              ),
-            ),
-            const SizedBox(
-              width: 12,
-            ),
-            Expanded(
-              child: GestureDetector(
-                onTap: () {
-
-
-                  setState(() {
-                    if (player4term <= 10) {
-                      number4 = Random().nextInt(6) + 1;
-                      player4term = player4term + 1;
-                      print("player4term$player4term");
-                      print(number4);
-                      resplayer4=resplayer4+number4;
-                      counter = counter + 1;
-
-                    }});
-                  },
-
-                child: Image(
-                  image: AssetImage("images/dice$number4.png"),
-                  height: 150,
-                  width: 150,
-                ),
-              ),
-            )
-          ],
-        ),
-
-          // if(resplayer1>resplayer2)
-          //   f1=resplayer1;
-          // if(resplayer3>resplayer4)
-          //
-
-
-      ],
-    );
-
+    return Container();
   }
 }
 
+class DicePage extends StatefulWidget {
+  @override
+  _DicePageState createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
+  int total = 0;
+  int winner = 0;
+  int winn = 0;
+  int dice1 = 0;
+  int dice2 = 0;
+  int dice3 = 0;
+  int dice4 = 0;
+  int limit = 10;
+  int left = 1;
+  int right = 1;
+  int Bleft = 1;
+  int Bright = 1;
+  int dice1count = 0;
+  int dice2count = 0;
+  int dice3count = 0;
+  int dice4count = 0;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.green,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Totalclicks: $limit',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40.0,
+                ),
+              ),
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {
+                          setState(() {
+                            if (dice1count < 10) {
+                              Bleft = Random().nextInt(6) + 1;
+                              dice1 = dice1 + Bleft;
+                              dice1count = dice1count + 1;
+                              total = total + Bleft;
+                            }
+                            ;
+                            if (dice1 > dice2 &&
+                                dice1 > dice3 &&
+                                dice1 > dice4) {
+                              winner = dice1;
+                              winn = 1;
+                            } else if (dice2 > dice1 &&
+                                dice2 > dice3 &&
+                                dice2 > dice4) {
+                              winner = dice2;
+                              winn = 2;
+                            } else if (dice3 > dice1 &&
+                                dice3 > dice2 &&
+                                dice3 > dice4) {
+                              winner = dice3;
+                              winn = 3;
+                            } else {
+                              winner = dice4;
+                              winn = 4;
+                            }
+                            ;
+                            if (dice2count >= dice1count &&
+                                dice3count >= dice1count &&
+                                dice4count >= dice1count) {
+                              if (limit > 0) {
+                                limit = limit - 1;
+                              }
+                            }
+                            ;
+                            if (dice1count == 10 &&
+                                dice2count == 10 &&
+                                dice3count == 10 &&
+                                dice4count == 10) {
+                              AlertDialog alert = AlertDialog(
+                                title: Text('Winner: Dice $winn'),
+                                content: Text('Points: $winner points'),
+                                actions: [
+                                  MaterialButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('Ok'),
+                                  ),
+                                  MaterialButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        total = 0;
+                                        winner = 0;
+                                        winn = 0;
+                                        dice1 = 0;
+                                        dice2 = 0;
+                                        dice3 = 0;
+                                        dice4 = 0;
+                                        limit = 10;
+                                        left = 1;
+                                        right = 1;
+                                        Bleft = 1;
+                                        Bright = 1;
+                                        dice1count = 0;
+                                        dice2count = 0;
+                                        dice3count = 0;
+                                        dice4count = 0;
+                                      });
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('Restart'),
+                                  ),
+                                ],
+                              );
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext) {
+                                  return alert;
+                                },
+                              );
+                            }
+                          });
+                        },
+                        child: Image.asset('images/dice$Bleft.png'),
+                      ),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {
+                          setState(() {
+                            if (dice2count < 10) {
+                              Bright = Random().nextInt(6) + 1;
+                              dice2 = dice2 + Bright;
+                              dice2count = dice2count + 1;
+                              total = total + Bright;
+                            }
+                            ;
+                            if (dice1 > dice2 &&
+                                dice1 > dice3 &&
+                                dice1 > dice4) {
+                              winner = dice1;
+                              winn = 1;
+                            } else if (dice2 > dice1 &&
+                                dice2 > dice3 &&
+                                dice2 > dice4) {
+                              winner = dice2;
+                              winn = 2;
+                            } else if (dice3 > dice1 &&
+                                dice3 > dice2 &&
+                                dice3 > dice4) {
+                              winner = dice3;
+                              winn = 3;
+                            } else {
+                              winner = dice4;
+                              winn = 4;
+                            }
+                            ;
+                            if (dice1count >= dice2count &&
+                                dice3count >= dice2count &&
+                                dice4count >= dice2count) {
+                              if (limit > 0) {
+                                limit = limit - 1;
+                              }
+                            }
+                            ;
+                            if (dice1count == 10 &&
+                                dice2count == 10 &&
+                                dice3count == 10 &&
+                                dice4count == 10) {
+                              AlertDialog alert = AlertDialog(
+                                title: Text('Winner: Dice $winn'),
+                                content: Text('Points: $winner points'),
+                                actions: [
+                                  MaterialButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('Ok'),
+                                  ),
+                                  MaterialButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        total = 0;
+                                        winner = 0;
+                                        winn = 0;
+                                        dice1 = 0;
+                                        dice2 = 0;
+                                        dice3 = 0;
+                                        dice4 = 0;
+                                        limit = 10;
+                                        left = 1;
+                                        right = 1;
+                                        Bleft = 1;
+                                        Bright = 1;
+                                        dice1count = 0;
+                                        dice2count = 0;
+                                        dice3count = 0;
+                                        dice4count = 0;
+                                      });
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('Restart'),
+                                  ),
+                                ],
+                              );
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext) {
+                                  return alert;
+                                },
+                              );
+                            }
+                          });
+                        },
+                        child: Image.asset('images/dice$Bright.png'),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {
+                          setState(() {
+                            if (dice3count < 10) {
+                              left = Random().nextInt(6) + 1;
+                              dice3 = dice3 + left;
+                              dice3count = dice3count + 1;
+                              total = total + left;
+                            }
+                            ;
+                            if (dice1 > dice2 &&
+                                dice1 > dice3 &&
+                                dice1 > dice4) {
+                              winner = dice1;
+                              winn = 1;
+                            } else if (dice2 > dice1 &&
+                                dice2 > dice3 &&
+                                dice2 > dice4) {
+                              winner = dice2;
+                              winn = 2;
+                            } else if (dice3 > dice1 &&
+                                dice3 > dice2 &&
+                                dice3 > dice4) {
+                              winner = dice3;
+                              winn = 3;
+                            } else {
+                              winner = dice4;
+                              winn = 4;
+                            }
+                            ;
+                            if (dice2count >= dice3count &&
+                                dice1count >= dice3count &&
+                                dice4count >= dice3count) {
+                              if (limit > 0) {
+                                limit = limit - 1;
+                              }
+                            }
+                            ;
+                            if (dice1count == 10 &&
+                                dice2count == 10 &&
+                                dice3count == 10 &&
+                                dice4count == 10) {
+                              AlertDialog alert = AlertDialog(
+                                title: Text('Winner: Dice $winn'),
+                                content: Text('Points: $winner points'),
+                                actions: [
+                                  MaterialButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('Ok'),
+                                  ),
+                                  FlatButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        total = 0;
+                                        winner = 0;
+                                        winn = 0;
+                                        dice1 = 0;
+                                        dice2 = 0;
+                                        dice3 = 0;
+                                        dice4 = 0;
+                                        limit = 10;
+                                        left = 1;
+                                        right = 1;
+                                        Bleft = 1;
+                                        Bright = 1;
+                                        dice1count = 0;
+                                        dice2count = 0;
+                                        dice3count = 0;
+                                        dice4count = 0;
+                                      });
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('Restart'),
+                                  ),
+                                ],
+                              );
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext) {
+                                  return alert;
+                                },
+                              );
+                            }
+                          });
+                        },
+                        child: Image.asset('images/dice$left.png'),
+                      ),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {
+                          setState(() {
+                            if (dice4count < 10) {
+                              right = Random().nextInt(6) + 1;
+                              dice4 = dice4 + right;
+                              dice4count = dice4count + 1;
+                              total = total + right;
+                            }
+                            ;
+                            if (dice1 > dice2 &&
+                                dice1 > dice3 &&
+                                dice1 > dice4) {
+                              winner = dice1;
+                              winn = 1;
+                            } else if (dice2 > dice1 &&
+                                dice2 > dice3 &&
+                                dice2 > dice4) {
+                              winner = dice2;
+                              winn = 2;
+                            } else if (dice3 > dice1 &&
+                                dice3 > dice2 &&
+                                dice3 > dice4) {
+                              winner = dice3;
+                              winn = 3;
+                            } else {
+                              winner = dice4;
+                              winn = 4;
+                            }
+                            ;
+                            if (dice2count >= dice4count &&
+                                dice3count >= dice4count &&
+                                dice1count >= dice4count) {
+                              if (limit > 0) {
+                                limit = limit - 1;
+                              }
+                            }
+                            ;
+                            if (dice1count == 10 &&
+                                dice2count == 10 &&
+                                dice3count == 10 &&
+                                dice4count == 10) {
+                              AlertDialog alert = AlertDialog(
+                                title: Text('Winner: Dice $winn'),
+                                content: Text('Points: $winner points'),
+                                actions: [
+                                  FlatButton(
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('Ok'),
+                                  ),
+                                  FlatButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        total = 0;
+                                        winner = 0;
+                                        winn = 0;
+                                        dice1 = 0;
+                                        dice2 = 0;
+                                        dice3 = 0;
+                                        dice4 = 0;
+                                        limit = 10;
+                                        left = 1;
+                                        right = 1;
+                                        Bleft = 1;
+                                        Bright = 1;
+                                        dice1count = 0;
+                                        dice2count = 0;
+                                        dice3count = 0;
+                                        dice4count = 0;
+                                      });
+                                      Navigator.of(context).pop();
+                                    },
+                                    child: Text('Restart'),
+                                  ),
+                                ],
+                              );
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext) {
+                                  return alert;
+                                },
+                              );
+                            }
+                          });
+                        },
+                        child: Image.asset('images/dice$right.png'),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: 440.0,
+                height: 20.0,
+                child: Divider(
+                  color: Colors.black,
+                ),
+              ),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Text('\n'),
+                        Text(
+                          'Dice1',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Dice2',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Dice3',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          'Dice4',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          'Total clicked',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '$dice1count',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '$dice2count',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '$dice3count',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '$dice4count',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '\t|\t',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          'Total Ponts',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '$dice1',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '$dice2',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '$dice3',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          '$dice4',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
