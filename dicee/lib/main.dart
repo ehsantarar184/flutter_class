@@ -306,7 +306,7 @@ class _DicePageState extends State<DicePage> {
                                     },
                                     child: Text('Ok'),
                                   ),
-                                  FlatButton(
+                                  MaterialButton(
                                     onPressed: () {
                                       setState(() {
                                         total = 0;
@@ -391,13 +391,13 @@ class _DicePageState extends State<DicePage> {
                                 title: Text('Winner: Dice $winn'),
                                 content: Text('Points: $winner points'),
                                 actions: [
-                                  FlatButton(
+                                  MaterialButton(
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },
                                     child: Text('Ok'),
                                   ),
-                                  FlatButton(
+                                  MaterialButton(
                                     onPressed: () {
                                       setState(() {
                                         total = 0;
