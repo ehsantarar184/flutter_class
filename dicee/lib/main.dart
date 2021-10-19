@@ -1,173 +1,174 @@
 import 'dart:math';
 
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    title: "Dice App",
-    color: Colors.red,
-    home: homePage(),
-  ));
+  return runApp(
+    MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.red[900],
+        appBar: AppBar(
+          title: Text("Dice App"),
+        ),
+        body: Dicepage(),
+      ),
+    ),
+  );
 }
 
-class homePage extends StatefulWidget {
-  const homePage({Key? key}) : super(key: key);
+class Dicepage extends StatefulWidget {
+  const Dicepage({Key? key}) : super(key: key);
+
   @override
-  _homePageState createState() => _homePageState();
+  _DicepageState createState() => _DicepageState();
 }
 
-class _homePageState extends State<homePage> {
-  int num1 = 1;
-  int num2 = 1;
-  int num3 = 1;
-  int num4 = 1;
-  int pls1 = 0;
-  int pls2 = 0;
-  int pls3 = 0;
-  int pls4 = 0;
-  int global=11;
-  int pressed=10;
-  @override
+class _DicepageState extends State<Dicepage> {
+  int number1 = 1;
+  int number2 = 1;
+  int number3 = 1;
+  int number4 = 1;
+  int resplayer1=0;
+  int resplayer2=0;
+  int resplayer3=0;
+  int resplayer4=0;
+  int player1term = 0;
+  int player2term = 0;
+  int player3term = 0;
+  int player4term = 0;
+  int counter=10;
+
+
+
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.red,
-      body: SafeArea(
-
-        child: Column(
+    return Column(
+      children: [
+        Row(
           children: [
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 25),
-                  child: Text(
-                    "Player 1",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                  ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    if (player1term <= 10)
+                    number1 = Random().nextInt(6) + 1;
+                    player1term = player1term + 1;
+                    print("player1term$player1term");
+                    print(number1);
+                    resplayer1=resplayer1+number1;
+                    counter = counter + 1;
+
+
+                  }
+
+                  );
+
+                },
+                child: Image(
+                  image: AssetImage("images/dice$number1.png"),
+                  height: 150,
+                  width: 150,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 160),
-                  child: Text(
-                    "Player 2",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                  ),
-                )
-              ],
+              ),
             ),
-            Row(
-              children: [
-                Flexible(
-                  flex: 10,
-                  child:    GestureDetector(
-                  onTap: () {
-                    setState(() {
+            const SizedBox(
+              width: 12,
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
 
-                      // global=global-1;
-                      num1 = Random().nextInt(6) + 1;
-                      pls1 += num1;
 
-                      // print(num1);
-                      // global=global-1;
+                  setState(() {
 
-                    });
+                    if (player2term <= 10) {
+                      number2 = Random().nextInt(6) + 1;
+                      player2term = player2term + 1;
+
+                      print("player2term$player2term");
+                      print(number2);
+                      resplayer2=resplayer2+number2;
+                      counter = counter + 1;
+
+                    }});
                   },
-                  child: Image.asset(
-                    "images/dice$num1.png",
-                    height: 150,
-                    width: 150,
-                  ),
-                ),),
 
-
-                SizedBox(
-                  width: 100,
+                child: Image(
+                  image: AssetImage("images/dice$number2.png"),
+                  height: 150,
+                  width: 150,
                 ),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      // if (pls2 <= 4) {
-                        num2 = Random().nextInt(6) + 1;
-                        pls2 += num2;
-                        global = global - 1;
-                      
-                    }
-                      );
-                  },
-                  child: Image.asset(
-                    "images/dice$num2.png",
-                    height: 150,
-                    width: 150,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 100,
-            ),
-
-            Text("Player 1 score: $pls1"),
-            Text("Player 2 score: $pls2"),
-            Text("Player 3 score: $pls3"),
-            Text("Player 4 score: $pls4"),
-             Text("$GestureDetector"),
-
-            Row(
-              children: [
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      num3 = Random().nextInt(6) + 1;
-                      pls3 += num3;
-                    });
-                  },
-                  child: Image.asset(
-                    "images/dice$num3.png",
-                    height: 150,
-                    width: 150,
-                  ),
-                ),
-                SizedBox(
-                  width: 100,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      num4 = Random().nextInt(6) + 1;
-                      pls4 += num4;
-                    });
-                  },
-                  child: Image.asset(
-                    "images/dice$num4.png",
-                    height: 150,
-                    width: 150,
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 25),
-                  child: Text(
-                    "Player 3",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 160),
-                  child: Text(
-                    "Player 4",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                  ),
-                )
-              ],
-            ),
-
-
-
+              ),
+            )
           ],
         ),
-      ),
+        const SizedBox(
+          height: 12,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+
+
+                  setState(() {
+    if (player3term <= 10) {
+    number3 = Random().nextInt(6) + 1;
+    player3term = player3term + 1;
+    print("player3term$player3term");
+    print(number3);
+    resplayer3=resplayer3+number3;
+    counter = counter + 1;
+
+    }
+    }
+                    );
+                  },
+
+                child: Image(
+                  image: AssetImage("images/dice$number3.png"),
+                  height: 150,
+                  width: 150,
+                ),
+              ),
+            ),
+            const SizedBox(
+              width: 12,
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () {
+
+
+                  setState(() {
+                    if (player4term <= 10) {
+                      number4 = Random().nextInt(6) + 1;
+                      player4term = player4term + 1;
+                      print("player4term$player4term");
+                      print(number4);
+                      resplayer4=resplayer4+number4;
+                      counter = counter + 1;
+
+                    }});
+                  },
+
+                child: Image(
+                  image: AssetImage("images/dice$number4.png"),
+                  height: 150,
+                  width: 150,
+                ),
+              ),
+            )
+          ],
+        ),
+
+
+
+
+
+
+      ],
     );
   }
 }
+
