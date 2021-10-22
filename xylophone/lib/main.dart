@@ -48,7 +48,11 @@ class _homePageState extends State<homePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        
+        appBar: AppBar(
+          title: Text(
+            "Xylophone App"
+          ),
+        ),
       ),
     );
   }
