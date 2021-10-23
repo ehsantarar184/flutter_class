@@ -5,21 +5,26 @@ import 'package:flutter/material.dart';
 void main()=> runApp(MaterialApp(
   theme: ThemeData(primaryColor: Colors.red,accentColor: Colors.yellowAccent),
   debugShowCheckedModeBanner: false,
-  home: SplashScreen(),
+  home: xylo(),
 )
 );
 
-class SplashScreen extends StatefulWidget{
+class xylo extends StatefulWidget{
   @override
-  _SplashScreenState createState()=> _SplashScreenState();
+  SplashScreenState createState()=> SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>{
+class SplashScreenState extends State<xylo>{
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5),()=> print("splash done"));
+    Timer(Duration(seconds: 5),()=>Navigator.pushReplacement(context,
+        MaterialPageRoute(builder:
+        (context) => xylophone()
+    )
+    )
+    );
   }
 
   @override
@@ -99,23 +104,22 @@ class _SplashScreenState extends State<SplashScreen>{
   }
 
 }
-class app extends StatefulWidget {
-  const app({Key? key}) : super(key: key);
+class xylophone extends StatefulWidget {
+  const xylophone({Key? key}) : super(key: key);
 
   @override
-  _appState createState() => _appState();
+  _xylophoneState createState() => _xylophoneState();
 }
 
-class _appState extends State<app> {
+class _xylophoneState extends State<xylophone> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-              "Xylophone App"
-          ),
-        ),
+    return Scaffold(
+      appBar: AppBar(title:Text("Splash Screen Example")),
+      body: Center(
+          child:Text("Welcome to Home Page",
+              style: TextStyle( color: Colors.black, fontSize: 30)
+          )
       ),
     );
   }
