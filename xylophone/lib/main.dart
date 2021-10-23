@@ -1,53 +1,122 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget {
+void main()=> runApp(MaterialApp(
+  theme: ThemeData(primaryColor: Colors.red,accentColor: Colors.yellowAccent),
+  debugShowCheckedModeBanner: false,
+  home: SplashScreen(),
+)
+);
+
+class SplashScreen extends StatefulWidget{
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _SplashScreenState createState()=> _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen>{
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
-    Timer(
-        Duration(seconds: 3),
-            () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => HomeScreen())));
+    Timer(Duration(seconds: 5),()=> print("splash done"));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: Image.asset('assets/images/xylophone.jpg'),
+    // TODO: implement build
+    return new Scaffold(
+      body: Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(color: Colors.orangeAccent),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Expanded(
+                flex: 2,
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 100.0,
+                        child: Icon(
+                          Icons.android,
+                          color: Colors.orangeAccent,
+                          size: 100.0,
+                        ),
+                      ),
+                      Padding(padding: EdgeInsets.only(top: 40.0),
+                      ),
+                      Text(
+                        "Flutter",
+                        style: TextStyle(color: Colors.white,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Text("Splash Screen",
+                        style: TextStyle(color: Colors.white,
+                          fontSize: 30.0,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(flex: 1,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    SizedBox(
+
+                      child: CircularProgressIndicator(
+                        valueColor: AlwaysStoppedAnimation(Colors.tealAccent),
+                        strokeWidth: 5.0,
+                        //backgroundColor: Colors.redAccent,
+                      ),
+                      height: 70.0,
+                      width: 70.0,
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 40.0),
+
+                    ),
+                    Text("Welcome\nEveryone",
+                      style: TextStyle(color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold),
+
+                    )
+                  ],
+                ),)
+            ],
+          )
+        ],
       ),
     );
   }
+
 }
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class app extends StatefulWidget {
+  const app({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
-  }
-
+  _appState createState() => _appState();
 }
-void main() {
-  return runApp(
-    MaterialApp(
+
+class _appState extends State<app> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.green,
         appBar: AppBar(
-          centerTitle: true,
-          title: Text('Dicee'),
-          backgroundColor: Colors.blue,
+          title: Text(
+              "Xylophone App"
+          ),
         ),
-        body: HomeScreen(),
       ),
-    ),
-  );
+    );
+  }
 }
