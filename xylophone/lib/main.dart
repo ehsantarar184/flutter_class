@@ -104,22 +104,42 @@ class SplashScreenState extends State<xylo>{
   }
 
 }
-class xylophone extends StatefulWidget {
-  const xylophone({Key? key}) : super(key: key);
+class xylophone extends StatelessWidget {
+  void playSound(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
 
-  @override
-  _xylophoneState createState() => _xylophoneState();
-}
+  Expanded buildKey({Color color, int soundNumber}) {
+    return Expanded(
+      child: FlatButton(
+        color: color,
+        onPressed: () {
+          playSound(soundNumber);
+        },
+      ),
+    );
+  }
 
-class _xylophoneState extends State<xylophone> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title:Text("Splash Screen Example")),
-      body: Center(
-          child:Text("Welcome to Home Page",
-              style: TextStyle( color: Colors.black, fontSize: 30)
-          )
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              buildKey(color: Colors.red, soundNumber: 1),
+              buildKey(color: Colors.orange, soundNumber: 2),
+              buildKey(color: Colors.yellow, soundNumber: 3),
+              buildKey(color: Colors.green, soundNumber: 4),
+              buildKey(color: Colors.teal, soundNumber: 5),
+              buildKey(color: Colors.blue, soundNumber: 6),
+              buildKey(color: Colors.purple, soundNumber: 7),
+            ],
+          ),
+        ),
       ),
     );
   }
