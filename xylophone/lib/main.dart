@@ -57,14 +57,14 @@ class SplashScreenState extends State<xylo> {
                         padding: EdgeInsets.only(top: 40.0),
                       ),
                       Text(
-                        "Flutter",
+                        "Flutter Xylophone App",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        "Splash Screen",
+                        "Xylophone Splash Screen",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 30.0,
@@ -92,7 +92,7 @@ class SplashScreenState extends State<xylo> {
                       padding: EdgeInsets.only(top: 40.0),
                     ),
                     Text(
-                      "Welcome\nEveryone",
+                      "Welcome\nEveryone \nTo Xylophone App",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20.0,
