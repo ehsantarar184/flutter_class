@@ -46,11 +46,11 @@ class SplashScreenState extends State<xylo> {
                     children: <Widget>[
                       CircleAvatar(
                         backgroundColor: Colors.white,
-                        radius: 100.0,
+                        radius: 70.0,
                         child: Icon(
                           Icons.android_sharp,
                           color: Colors.orangeAccent,
-                          size: 100.0,
+                          size: 70.0,
                         ),
                       ),
                       Padding(
@@ -60,14 +60,14 @@ class SplashScreenState extends State<xylo> {
                         "Flutter Xylophone App",
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 30.0,
+                            fontSize: 20.0,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
                         "Xylophone Splash Screen",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 30.0,
+                          fontSize: 20.0,
                         ),
                       )
                     ],
