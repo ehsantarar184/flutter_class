@@ -21,7 +21,7 @@ class SplashScreenState extends State<xylo> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
+        Duration(seconds: 3),
             () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => xylophone())));
   }
@@ -33,7 +33,7 @@ class SplashScreenState extends State<xylo> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.orangeAccent),
+            decoration: BoxDecoration(color: Colors.lightGreenAccent),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -48,7 +48,7 @@ class SplashScreenState extends State<xylo> {
                         backgroundColor: Colors.white,
                         radius: 100.0,
                         child: Icon(
-                          Icons.android,
+                          Icons.smartphone,
                           color: Colors.orangeAccent,
                           size: 100.0,
                         ),
@@ -57,19 +57,18 @@ class SplashScreenState extends State<xylo> {
                         padding: EdgeInsets.only(top: 40.0),
                       ),
                       Text(
-                        "Flutter Xylophone App",
+                        "Xylophone",
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 30.0,
                             fontWeight: FontWeight.bold),
                       ),
-                      Text(
-                        "Xylophone Splash Screen",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30.0,
-                        ),
-                      )
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Expanded(
+                        child: Image.asset('assets/img.png'),
+                      ),
                     ],
                   ),
                 ),
@@ -92,9 +91,9 @@ class SplashScreenState extends State<xylo> {
                       padding: EdgeInsets.only(top: 40.0),
                     ),
                     Text(
-                      "Welcome\nEveryone \nTo Xylophone App",
+                      "Welcome To Xylophone App",
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold),
                     )
@@ -110,7 +109,7 @@ class SplashScreenState extends State<xylo> {
 }
 
 class xylophone extends StatelessWidget {
-  const xylophone({Key? key}) : super(key: key);
+  const xylophone({key}) : super(key: key);
 
   void playAudio(String fileName) {
     final players = AudioCache();
@@ -139,7 +138,7 @@ class xylophone extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         customWidget(Colors.red, "1"),
-        customWidget(Colors.grey, "2"),
+        customWidget(Colors.brown, "2"),
         customWidget(Colors.green, "3"),
         customWidget(Colors.blue, "4"),
         customWidget(Colors.cyan, "5"),

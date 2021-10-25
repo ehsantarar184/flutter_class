@@ -33,7 +33,7 @@ class SplashScreenState extends State<xylo> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.orangeAccent),
+            decoration: BoxDecoration(color: Colors.blueAccent),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -48,7 +48,7 @@ class SplashScreenState extends State<xylo> {
                         backgroundColor: Colors.white,
                         radius: 100.0,
                         child: Icon(
-                          Icons.android,
+                          Icons.android_sharp,
                           color: Colors.orangeAccent,
                           size: 100.0,
                         ),
@@ -85,19 +85,16 @@ class SplashScreenState extends State<xylo> {
                         strokeWidth: 5.0,
                         //backgroundColor: Colors.redAccent,
                       ),
-                      height: 70.0,
-                      width: 70.0,
+                      height: 50.0,
+                      width: 50.0,
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 40.0),
                     ),
-                    Text(
-                      "Welcome\nEveryone \nTo Xylophone App",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold),
-                    )
+                    Image.asset("assets/xy.jpg",width: 100.0,
+                      height: 100.0,
+                      fit: BoxFit.cover,),
+                   
                   ],
                 ),
               )
