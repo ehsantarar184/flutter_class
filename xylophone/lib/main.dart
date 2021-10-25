@@ -119,13 +119,8 @@ class xylophone extends StatelessWidget {
       child: Container(
         child: TextButton(
           style: TextButton.styleFrom(
-            backgroundColor: color,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero, side: BorderSide(color: Colors.red)
-
-              )
-          ),
-
-          onPressed: () {
+            backgroundColor: color),
+            onPressed: () {
             playAudio(fileName);
           },
           child: Text(''),
