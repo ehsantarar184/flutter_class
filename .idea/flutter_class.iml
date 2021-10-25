@@ -21,6 +21,8 @@
       <excludeFolder url="file://$MODULE_DIR$/dicee/build" />
       <excludeFolder url="file://$MODULE_DIR$/practice/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/practice/build" />
+      <excludeFolder url="file://$MODULE_DIR$/xylophone/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/xylophone/build" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
