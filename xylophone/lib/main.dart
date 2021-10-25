@@ -94,7 +94,7 @@ class SplashScreenState extends State<xylo> {
                     Image.asset("assets/xy.jpg",width: 100.0,
                       height: 100.0,
                       fit: BoxFit.cover,),
-                   
+
                   ],
                 ),
               )
@@ -120,7 +120,11 @@ class xylophone extends StatelessWidget {
         child: TextButton(
           style: TextButton.styleFrom(
             backgroundColor: color,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero, side: BorderSide(color: Colors.red)
+
+              )
           ),
+
           onPressed: () {
             playAudio(fileName);
           },
@@ -136,12 +140,12 @@ class xylophone extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         customWidget(Colors.red, "1"),
-        customWidget(Colors.grey, "2"),
+        customWidget(Colors.pink, "2"),
         customWidget(Colors.green, "3"),
         customWidget(Colors.blue, "4"),
         customWidget(Colors.cyan, "5"),
         customWidget(Colors.yellow, "6"),
-        customWidget(Colors.pink, "7"),
+        customWidget(Colors.tealAccent, "7"),
       ],
     );
   }
