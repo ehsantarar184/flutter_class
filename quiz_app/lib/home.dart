@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/contact.dart';
+import 'package:quizstar/contact_us.dart';
+import 'package:quizstar/quizpage.dart';
 
 
 class homepage extends StatefulWidget {
-  const homepage({Key? key}) : super(key: key);
-
   @override
   _homepageState createState() => _homepageState();
 }
@@ -78,14 +77,14 @@ class _homepageState extends State<homepage> {
                   child: Text(
                     des,
                     style: TextStyle(
-                        fontSize: 18.0,
-                        color: Colors.white,
-                        fontFamily: "Alike"
+                      fontSize: 18.0,
+                      color: Colors.white,
+                      fontFamily: "Alike"
                     ),
                     maxLines: 5,
                     textAlign: TextAlign.justify,
                   ),
-
+                  
                 ),
               ],
             ),

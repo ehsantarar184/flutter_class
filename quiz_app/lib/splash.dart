@@ -1,14 +1,12 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
-
-import 'package:quiz_app/home.dart';
+import 'package:flutter/material.dart';
+import 'package:quizstar/home.dart';
 
 class splashscreen extends StatefulWidget {
-  const splashscreen({Key? key}) : super(key: key);
-
   @override
   _splashscreenState createState() => _splashscreenState();
 }
+
 class _splashscreenState extends State<splashscreen> {
 
   @override
@@ -26,7 +24,7 @@ class _splashscreenState extends State<splashscreen> {
       appBar: AppBar(title:Text("EHSAN ULLAH (FA18-BCS-027)")),
       body: Center(
         child: Text(
-          "Quiz App Splash Screen",
+          "Quiz App",
           style: TextStyle(
             fontSize: 50.0,
             color: Colors.black,
