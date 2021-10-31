@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:quizstar/contact_us.dart';
 import 'package:quizstar/home.dart';
+import 'package:quizstar/quizpage.dart';
 
 class resultpage extends StatefulWidget {
   int marks;
@@ -81,7 +85,7 @@ class _resultpageState extends State<resultpage> {
                         ),
                       ),
 
-                    )
+                    ),
                     ),
                   ],
                 ),
@@ -165,4 +169,6 @@ class _resultpageState extends State<resultpage> {
           )),
     );
   }
+
+
 }
