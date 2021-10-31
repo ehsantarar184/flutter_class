@@ -61,7 +61,6 @@ class _quizpageState extends State<quizpage> {
   int marks = 0;
   int i = 1;
   bool disableAnswer = false;
-  // extra varibale to iterate
   int j = 1;
   int timer = 30;
   String showtimer = "30";
@@ -133,8 +132,6 @@ class _quizpageState extends State<quizpage> {
       }
       btncolor["a"] = Colors.orange;
       btncolor["b"] = Colors.orange;
-      btncolor["c"] = Colors.orange;
-      btncolor["d"] = Colors.orange;
       disableAnswer = false;
     });
     starttimer();

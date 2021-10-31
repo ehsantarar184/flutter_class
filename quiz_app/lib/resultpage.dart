@@ -151,7 +151,7 @@ class _resultpageState extends State<resultpage> {
                 },
               ),
               ListTile(
-                title: const Text('FA18-BCS-027'),
+                title: const Text('Contact Us'),
                 onTap: () {
                   // Update the state of the app
                   // ...
