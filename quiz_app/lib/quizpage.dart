@@ -65,6 +65,17 @@ class _quizpageState extends State<quizpage> {
   int timer = 30;
   String showtimer = "30";
   var random_array;
+  AnimationController controller;
+
+  Animation animation;
+
+  double beginAnim = 0.0;
+
+  double endAnim = 1.0;
+
+
+
+
 
   Map<String, Color> btncolor = {
     "a": Colors.pink,
@@ -102,6 +113,15 @@ class _quizpageState extends State<quizpage> {
   }
 
   void starttimer() async {
+    controller =
+        AnimationController(duration: const Duration(seconds: 10),);
+    animation = Tween(begin: beginAnim, end: endAnim).animate(controller)
+      ..addListener(() {
+        setState(() {
+          // Change here any Animation object value.
+        });
+      });
+
     const onesec = Duration(seconds: 1);
     Timer.periodic(onesec, (Timer t) {
       setState(() {
