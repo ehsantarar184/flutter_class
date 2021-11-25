@@ -84,6 +84,37 @@ class _firstpageState extends State<firstpage> {
               ),
             ],
           ),
-        ));
+        ),
+      drawer: Drawer(
+    child: ListView(
+    padding: EdgeInsets.zero,
+      children: [
+        const DrawerHeader(
+          decoration: BoxDecoration(
+            color: Colors.blue,
+          ),
+          child: Text('GP fund App'),
+        ),
+        ListTile(
+          title: const Text('Ehsan Ullah'),
+          onTap: () {
+            // Update the state of the app
+            // ...
+            // Then close the drawer
+            Navigator.pop(context);
+          },
+        ),
+        ListTile(
+          title: const Text('FA18-BCS-027'),
+          onTap: () {
+            // Update the state of the app
+            // ...
+            // Then close the drawer
+            Navigator.pop(context);
+          },
+        ),
+      ],
+    )),
+    );
   }
 }
