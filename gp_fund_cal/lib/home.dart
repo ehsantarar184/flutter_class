@@ -1,115 +1,89 @@
 import 'package:flutter/material.dart';
-import 'package:gp_fund_cal/next_page.dart';
-import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+import 'package:gp_fund_cal/see.dart';
 
 
-void main() {
-  return runApp(calender());
-}
 
-/// My app class to display the date range picker
-class calender extends StatefulWidget {
+void main() => runApp(MaterialApp(
+  home: firstpage(),
+  theme: ThemeData.dark(),
+));
+
+class firstpage extends StatefulWidget {
+  const firstpage({Key? key}) : super(key: key);
+
   @override
-  calenderState createState() => calenderState();
+  _firstpageState createState() => _firstpageState();
 }
 
-/// State for MyApp
-class calenderState extends State<calender> {
-  String _selectedDate = '';
-  String _dateCount = '';
-  String _range = '';
-  String _rangeCount = '';
-
-  /// The method for [DateRangePickerSelectionChanged] callback, which will be
-  /// called whenever a selection changed on the date picker widget.
-
+class _firstpageState extends State<firstpage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text('GP Fund Calculator'),
-            ),
-            body: Stack(
-              children: <Widget>[
-                Positioned(
-                  left: 0,
-                  right: 0,
-                  top: 0,
-                  height: 80,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text('Selected date: ' + _selectedDate),
-                      Text('Selected date count: ' + _dateCount),
-                      Text('Selected range: ' + _range),
-                      Text('Selected ranges count: ' + _rangeCount)
-                    ],
-                  ),
-                ),
-                Positioned(
-                  left: 0,
-                  top: 80,
-                  right: 0,
-                  bottom: 0,
-                  child: SfDateRangePicker(
-                    selectionMode: DateRangePickerSelectionMode.range,
-                    initialSelectedRange: PickerDateRange(
-                        DateTime.now().subtract(const Duration(days: 4)),
-                        DateTime.now().add(const Duration(days: 3))),
-                  ),
-                )
-              ],
-
-            ),
-          drawer: Drawer(
-            // Add a ListView to the drawer. This ensures the user can scroll
-            // through the options in the drawer if there isn't enough vertical
-            // space to fit everything.
-              child: ListView(
-                // Important: Remove any padding from the ListView.
-                padding: EdgeInsets.zero,
-                children: [
-                  const DrawerHeader(
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text(
+            'pgf Calculator App',
+          ),
+          centerTitle: true,
+        ),
+        // drawer: contactus(),
+        body: Center(
+          child: Column(
+            children: [
+              Container(
+                margin: EdgeInsets.all(10),
+                height: 50,
+                width: 500,
+                child: FlatButton(
+                  color: Colors.black87,
+                  child: const Text(
+                    'OG1',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
                     ),
-                    child: Text('GP Fund Calculator'),
                   ),
-                  ListTile(
-                    title: const Text('Ehsan Ullah'),
-                    onTap: () {
-                      // Update the state of the app
-                      // ...
-                      // Then close the drawer
-                      Navigator.pop(context);
-                    },
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => og1()),
+                    );
+                  },
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(10),
+                height: 50,
+                width: 500,
+                child: FlatButton(
+                  color: Colors.black87,
+                  child: const Text(
+                    'OG2',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
                   ),
-                  ListTile(
-                    title: const Text('FA18-BCS-027'),
-                    onTap: () {
-                      // Update the state of the app
-                      // ...
-                      // Then close the drawer
-                      Navigator.pop(context);
-                    },
+                  onPressed: () {},
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(10),
+                height: 50,
+                width: 500,
+                child: FlatButton(
+                  color: Colors.black87,
+                  child: const Text(
+                    'OG3',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Colors.white,
+                    ),
                   ),
-                  ListTile(
-                    title: const Text('Contact Us'),
-                    onTap: () {
-                      // Update the state of the app
-                      // ...
-                      // Then close the drawer
-                      Navigator.push(context,
-
-                        MaterialPageRoute(builder: (context) =>  date()),);
-                    },
-                  ),
-                ],
-              )),
+                  onPressed: () {},
+                ),
+              ),
+            ],
+          ),
         ));
-
   }
 }
