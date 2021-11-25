@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gp_fund_calculator/splash.dart';
+import 'package:gp_fund_cal/splash.dart';
 
 void main() {
   runApp(const MyApp());

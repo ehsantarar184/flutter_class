@@ -1,7 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:gp_fund_calculator/home.dart';
+import 'package:gp_fund_cal/home.dart';
+
 
 class splashscreen extends StatefulWidget {
   @override
