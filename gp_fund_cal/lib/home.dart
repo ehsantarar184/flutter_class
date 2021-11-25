@@ -22,31 +22,6 @@ class calenderState extends State<calender> {
 
   /// The method for [DateRangePickerSelectionChanged] callback, which will be
   /// called whenever a selection changed on the date picker widget.
-  void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
-
-    setState(() {
-      if (args.value is PickerDateRange) {
-        _range =
-            DateFormat('dd/MM/yyyy').format(args.value.startDate).toString() +
-                ' - ' +
-                DateFormat('dd/MM/yyyy')
-                    .format(args.value.endDate ?? args.value.startDate)
-                    .toString();
-      } else if (args.value is DateTime) {
-        _selectedDate = args.value.toString();
-      } else if (args.value is List<DateTime>) {
-        _dateCount = args.value.length.toString();
-      } else {
-        _rangeCount = args.value.length.toString();
-      }
-      int daysBetween(DateTime from, DateTime to) {
-        from = DateTime(from.year, from.month, from.day);
-        to = DateTime(to.year, to.month, to.day);
-        return (to.difference(from).inHours / 24).round();
-      }
-
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +55,6 @@ class calenderState extends State<calender> {
                   right: 0,
                   bottom: 0,
                   child: SfDateRangePicker(
-                    onSelectionChanged: _onSelectionChanged,
                     selectionMode: DateRangePickerSelectionMode.range,
                     initialSelectedRange: PickerDateRange(
                         DateTime.now().subtract(const Duration(days: 4)),
