@@ -1,0 +1,362 @@
+{
+  "category": "Kategori",
+  "@category": {
+    "description": "Category for an exercise, ingredient, etc."
+  },
+  "musclesSecondary": "İkincil kaslar",
+  "@musclesSecondary": {
+    "description": "secondary muscles trained by an exercise"
+  },
+  "muscles": "Kaslar",
+  "@muscles": {
+    "description": "(main) muscles trained by an exercise"
+  },
+  "equipment": "Ekipman",
+  "@equipment": {
+    "description": "Equipment needed to perform an exercise"
+  },
+  "searchExercise": "Eklemek için egzersiz arayın",
+  "@searchExercise": {
+    "description": "Label on set form. Selected exercises are added to the set"
+  },
+  "exercise": "Egzersiz",
+  "@exercise": {
+    "description": "An exercise for a workout"
+  },
+  "successfullySaved": "Kaydedildi",
+  "@successfullySaved": {
+    "description": "Message when an item was successfully saved"
+  },
+  "successfullyDeleted": "Silindi",
+  "@successfullyDeleted": {
+    "description": "Message when an item was successfully deleted"
+  },
+  "labelDashboard": "Kontrol paneli",
+  "@labelDashboard": {
+    "description": "Title for screen dashboard"
+  },
+  "labelWorkoutPlan": "Antreman planları",
+  "@labelWorkoutPlan": {
+    "description": "Title for screen workout plan"
+  },
+  "labelWorkoutLogs": "Eğitim günlükleri",
+  "@labelWorkoutLogs": {
+    "description": "(Workout) logs"
+  },
+  "labelBottomNavNutrition": "Beslenme",
+  "@labelBottomNavNutrition": {
+    "description": "Label used in bottom navigation, use a short word"
+  },
+  "labelWorkoutPlans": "Antrenman planları",
+  "@labelWorkoutPlans": {
+    "description": "Title for screen workout plans"
+  },
+  "labelBottomNavWorkout": "Antrenman",
+  "@labelBottomNavWorkout": {
+    "description": "Label used in bottom navigation, use a short word"
+  },
+  "loginInstead": "Bunun yerine giriş yapın",
+  "@loginInstead": {},
+  "registerInstead": "Bunun yerine kaydolun",
+  "@registerInstead": {},
+  "reset": "Sıfırla",
+  "@reset": {
+    "description": "Button text allowing the user to reset the entered values to the default"
+  },
+  "customServerHint": "Kendi sunucunuzun adresini girin, aksi takdirde varsayılan sunucu kullanılacaktır",
+  "@customServerHint": {
+    "description": "Hint text for the form where the users can enter their own wger instance"
+  },
+  "customServerUrl": "wger örneğinin URL'si",
+  "@customServerUrl": {
+    "description": "Label in the form where the users can enter their own wger instance"
+  },
+  "invalidUsername": "Lütfen geçerli bir kullanıcı adı girin",
+  "@invalidUsername": {
+    "description": "Error message when the user enters an invalid username"
+  },
+  "username": "Kullanıcı adı",
+  "@username": {},
+  "email": "E-posta adresi",
+  "@email": {},
+  "invalidEmail": "Lütfen geçerli bir e-posta adresi girin",
+  "@invalidEmail": {
+    "description": "Error message when the user enters an invalid email"
+  },
+  "confirmPassword": "Şifreyi onayla",
+  "@confirmPassword": {},
+  "password": "Şifre",
+  "@password": {},
+  "passwordTooShort": "Şifre çok kısa",
+  "@passwordTooShort": {
+    "description": "Error message when the user a password that is too short"
+  },
+  "passwordsDontMatch": "Şifreler eşleşmiyor",
+  "@passwordsDontMatch": {
+    "description": "Error message when the user enters two different passwords during registration"
+  },
+  "usernameValidChars": "Kullanıcı adı yalnızca harf, rakam ve @, +, ., -ve _ karakterlerini içerebilir",
+  "@usernameValidChars": {
+    "description": "Error message when the user tries to register a username with forbidden characters"
+  },
+  "invalidUrl": "Lütfen geçerli bir URL girin",
+  "@invalidUrl": {
+    "description": "Error message when the user enters an invalid URL, e.g. in the login form"
+  },
+  "useCustomServer": "Özel sunucu kullan",
+  "@useCustomServer": {
+    "description": "Toggle button allowing users to switch between the default and a custom wger server"
+  },
+  "useDefaultServer": "Varsayılan sunucuyu kullan",
+  "@useDefaultServer": {
+    "description": "Toggle button allowing users to switch between the default and a custom wger server"
+  },
+  "register": "Kayıt ol",
+  "@register": {
+    "description": "Text for registration button"
+  },
+  "logout": "Çıkış yap",
+  "@logout": {
+    "description": "Text for logout button"
+  },
+  "login": "Giriş yap",
+  "@login": {
+    "description": "Text for login button"
+  },
+  "noWorkoutPlans": "Antrenman planınız yok",
+  "@noWorkoutPlans": {
+    "description": "Message shown when the user has no workout plans"
+  },
+  "repetitions": "Tekrarlar",
+  "@repetitions": {
+    "description": "Repetitions for an exercise set"
+  },
+  "reps": "Temsilciler",
+  "@reps": {
+    "description": "Shorthand for repetitions, used when space constraints are tighter"
+  },
+  "repetitionUnit": "Tekrarlama birimi",
+  "@repetitionUnit": {},
+  "set": "Ayarla",
+  "@set": {
+    "description": "A set in a workout plan"
+  },
+  "supersetWith": "süper set ile",
+  "@supersetWith": {
+    "description": "Text used between exercise cards when adding a new set. Translate as something like 'in a superset with'"
+  },
+  "newWorkout": "Yeni antrenman planı",
+  "@newWorkout": {
+    "description": "Header when adding a new workout"
+  },
+  "rirNotUsed": "RiR kullanılmadı",
+  "@rirNotUsed": {
+    "description": "Label used in RiR slider when the RiR value is not used/saved for the current setting or log"
+  },
+  "weightUnit": "Ağırlık birimi",
+  "@weightUnit": {},
+  "dayDescriptionHelp": "O gün yapılanların (örn. 'çekme günü') veya hangi vücut bölümlerinin (örn. 'göğüs ve omuzlar') çalıştırıldığının açıklaması",
+  "@dayDescriptionHelp": {},
+  "setNr": "{nr} ayarla",
+  "@setNr": {
+    "description": "Header in form indicating the number of the current set. Can also be translated as something like 'Set Nr. xy'.",
+    "type": "text",
+    "placeholders": {
+      "nr": {}
+    }
+  },
+  "sameRepetitions": "Eğer tüm setler için aynı ağırlıklarla aynı setleri yapıyorsanız, sadece bir satır doldurabilirsiniz. Örneğin, 4 set için sadece 10 girin, bu otomatik olarak \"4 x 10\"a dönüşüyor.",
+  "@sameRepetitions": {},
+  "selectExercises": "Eğer bir süper set yapmak istiyorsanız, birkaç egzersiz için arama yapabilirsiniz, birlikte gruplanacaklardır",
+  "@selectExercises": {},
+  "logHelpEntries": "Tek bir günde, aynı sayıda tekrara sahip ancak farklı ağırlıklara sahip birden fazla giriş varsa, diyagramda yalnızca daha yüksek ağırlığa sahip giriş gösterilir.",
+  "@logHelpEntries": {},
+  "addSet": "Set ekle",
+  "@addSet": {
+    "description": "Label for the button that adds a set (to a workout day)"
+  },
+  "date": "Tarih",
+  "@date": {
+    "description": "The date of a workout log or body weight entry"
+  },
+  "time": "Zaman",
+  "@time": {
+    "description": "The time of a meal or workout"
+  },
+  "logHelpEntriesUnits": "Yalnızca ağırlık birimi (kg veya lb) ve tekrarları olan girişlerin çizelgelendirildiğini, zaman veya arızaya kadar olan diğer kombinasyonların burada göz ardı edildiğini unutmayın.",
+  "@logHelpEntriesUnits": {},
+  "nutritionalPlans": "Beslenme planları",
+  "@nutritionalPlans": {},
+  "energyShort": "E",
+  "@energyShort": {
+    "description": "The first letter or short name of the word 'Energy', used in overviews"
+  },
+  "total": "Toplam",
+  "@total": {
+    "description": "Label used for total sums of e.g. calories or similar"
+  },
+  "kJ": "kilo joule",
+  "@kJ": {
+    "description": "Energy in a meal in kilo joules, kJ"
+  },
+  "anErrorOccurred": "Bir hata oluştu!",
+  "@anErrorOccurred": {},
+  "plateCalculator": "Tabaklar",
+  "@plateCalculator": {
+    "description": "Label used for the plate calculator in the gym mode"
+  },
+  "logIngredient": "Beslenme günlüğüne kaydet",
+  "@logIngredient": {},
+  "comment": "Yorum",
+  "@comment": {
+    "description": "Comment, additional information"
+  },
+  "notes": "Notlar",
+  "@notes": {
+    "description": "Personal notes, e.g. for a workout session"
+  },
+  "workoutSession": "Egzersiz Seansı",
+  "@workoutSession": {
+    "description": "A (logged) workout session"
+  },
+  "newDay": "Yeni gün",
+  "@newDay": {},
+  "newSet": "Yeni set",
+  "@newSet": {
+    "description": "Header when adding a new set to a workout day"
+  },
+  "gymMode": "Spor salonu modu",
+  "@gymMode": {
+    "description": "Label when starting the gym mode"
+  },
+  "plateCalculatorNotDivisible": "Varolan tabaklar ile istenilen ağırlığa ulaşmak mümkün değil",
+  "@plateCalculatorNotDivisible": {
+    "description": "Error message when the current weight is not reachable with plates (e.g. 33.1 kg)"
+  },
+  "pause": "Duraklat",
+  "@pause": {
+    "description": "Noun, not an imperative! Label used for the pause when using the gym mode"
+  },
+  "jumpTo": "Buraya git",
+  "@jumpTo": {
+    "description": "Imperative. Label used in popup allowing the user to jump to a specific exercise while in the gym mode"
+  },
+  "todaysWorkout": "Günlük antrenmanınız",
+  "@todaysWorkout": {},
+  "description": "Açıklama",
+  "@description": {},
+  "name": "İsim",
+  "@name": {
+    "description": "Name for a workout or nutritional plan"
+  },
+  "ingredient": "Bileşen",
+  "@ingredient": {},
+  "save": "Kaydet",
+  "@save": {},
+  "addMeal": "Yemek ekle",
+  "@addMeal": {},
+  "mealLogged": "Günlüğe kaydedilen yemek",
+  "@mealLogged": {},
+  "logMeal": "Bu yemeği kaydet",
+  "@logMeal": {},
+  "addIngredient": "Malzeme ekle",
+  "@addIngredient": {},
+  "measurements": "Ölçümler",
+  "@measurements": {
+    "description": "Categories for the measurements such as biceps size, body fat, etc."
+  },
+  "measurement": "Ölçüm",
+  "@measurement": {},
+  "searchIngredient": "İçerik ara",
+  "@searchIngredient": {
+    "description": "Label on ingredient search form"
+  },
+  "nutritionalPlan": "Beslenme planı",
+  "@nutritionalPlan": {},
+  "nutritionalDiary": "Beslenme Günlüğü",
+  "@nutritionalDiary": {},
+  "noNutritionalPlans": "Beslenme planınız yok",
+  "@noNutritionalPlans": {
+    "description": "Message shown when the user has no nutritional plans"
+  },
+  "weight": "Ağırlık",
+  "@weight": {
+    "description": "The weight of a workout log or body weight entry"
+  },
+  "measurementCategoriesHelpText": "\"Pazı\" veya \"vücut yağı\" gibi ölçüm kategorisi",
+  "@measurementCategoriesHelpText": {},
+  "measurementEntriesHelpText": "'cm' veya '%' gibi kategoriyi ölçmek için kullanılan birim",
+  "@measurementEntriesHelpText": {},
+  "value": "Değer",
+  "@value": {
+    "description": "The value of a measurement entry"
+  },
+  "start": "Başlangıç",
+  "@start": {
+    "description": "Label on button to start the gym mode (i.e., an imperative)"
+  },
+  "timeStart": "Başlangıç zamanı",
+  "@timeStart": {
+    "description": "The starting time of a workout"
+  },
+  "timeEnd": "Bitiş zamanı",
+  "@timeEnd": {
+    "description": "The end time of a workout"
+  },
+  "timeStartAhead": "Başlangıç zamanı, bitiş zamanından önce olamaz",
+  "@timeStartAhead": {},
+  "energy": "Enerji",
+  "@energy": {
+    "description": "Energy in a meal, ingredient etc. e.g. in kJ"
+  },
+  "kcal": "kilo kalori",
+  "@kcal": {
+    "description": "Energy in a meal in kilocalories, kcal"
+  },
+  "macronutrients": "Makrobesinler",
+  "@macronutrients": {},
+  "planned": "Planlı",
+  "@planned": {
+    "description": "Header for the column of 'planned' nutritional values, i.e. what should be eaten"
+  },
+  "logged": "Kaydedildi",
+  "@logged": {
+    "description": "Header for the column of 'logged' nutritional values, i.e. what was eaten"
+  },
+  "difference": "Fark",
+  "@difference": {},
+  "percentEnergy": "Enerji Yüzdesi",
+  "@percentEnergy": {},
+  "gPerBodyKg": "vücut kg başına düşen g",
+  "@gPerBodyKg": {
+    "description": "Label used for total sums of e.g. calories or similar in grams per Kg of body weight"
+  },
+  "g": "gram",
+  "@g": {
+    "description": "Abbreviation for gram"
+  },
+  "protein": "Protein",
+  "@protein": {},
+  "proteinShort": "P",
+  "@proteinShort": {
+    "description": "The first letter or short name of the word 'Protein', used in overviews"
+  },
+  "carbohydrates": "Karbonhidratlar",
+  "@carbohydrates": {},
+  "carbohydratesShort": "carb",
+  "@carbohydratesShort": {
+    "description": "The first letter or short name of the word 'Carbohydrates', used in overviews"
+  },
+  "sugars": "Şekerler",
+  "@sugars": {},
+  "fat": "Yağ",
+  "@fat": {},
+  "fatShort": "fat",
+  "@fatShort": {
+    "description": "The first letter or short name of the word 'Fat', used in overviews"
+  },
+  "saturatedFat": "Doymuş yağ",
+  "@saturatedFat": {},
+  "fibres": "Lif",
+  "@fibres": {}
+}

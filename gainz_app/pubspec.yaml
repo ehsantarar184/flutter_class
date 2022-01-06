@@ -1,0 +1,48 @@
+name: GainZ
+description: Tracks your workouts, progressions and weight
+
+version: 1.0.0+1
+
+environment:
+    sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+    flutter:
+        sdk: flutter
+    cupertino_icons: ^0.1.2
+    sqflite: ^1.1.6
+    path_provider: ^1.2.0
+    fluttertoast: ^3.1.2
+    intl: ^0.15.2
+    charts_flutter: ^0.8.0
+    bubble_bottom_bar: ^1.2.0
+    flutter_slidable: ^0.5.3
+    # flutter_speed_dial: ^1.2.1
+    # timeago: ^2.0.18
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    flutter_launcher_icons: ^0.7.0
+
+flutter_icons:
+    ios: true
+    android: true
+    image_path_ios: "assets/icons/icon.png"
+    image_path_android: "assets/icons/icon.png"
+    adaptive_icon_background: "assets/icons/background.png"
+    adaptive_icon_foreground: "assets/icons/foreground.png"
+
+flutter:
+    uses-material-design: true
+    fonts:
+        - family: Montserrat
+          fonts:
+              - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
+                weight: 400
+              - asset: assets/fonts/Montserrat/Montserrat-Medium.ttf
+                weight: 500
+              - asset: assets/fonts/Montserrat/Montserrat-SemiBold.ttf
+                weight: 600
+              - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+                weight: 700

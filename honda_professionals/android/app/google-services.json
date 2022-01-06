@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "285978155221",
+    "project_id": "honda-professionals",
+    "storage_bucket": "honda-professionals.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285978155221:android:1930ec6c333d0c648baa5c",
+        "android_client_info": {
+          "package_name": "com.example.honda_professionals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285978155221-6m1as942p2pbfev787q1trk7r1rgus8c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.honda_professionals",
+            "certificate_hash": "345c6ae6ac1827f2979644b2baf095a65222869e"
+          }
+        },
+        {
+          "client_id": "285978155221-hec6fv7tqt6v9viljuasscdsuic7ij7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASteHMlIDS5TNfZZjCqRQZqFFcZdYaDdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285978155221-hec6fv7tqt6v9viljuasscdsuic7ij7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

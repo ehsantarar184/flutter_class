@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "790292578103",
+    "project_id": "gym-app-flutter-firebase-sdk",
+    "storage_bucket": "gym-app-flutter-firebase-sdk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790292578103:android:8c2f9ed494267e031164b2",
+        "android_client_info": {
+          "package_name": "com.example.gym_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790292578103-6d512okeupmuv4gcgpku7aa2as2pgkie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gym_app",
+            "certificate_hash": "73fb4f9854aed7083a00884fb1582565ef3a1f0a"
+          }
+        },
+        {
+          "client_id": "790292578103-e1p57pafdinmp6t73r8tncpv7frm4e9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxQsSwSuvq57dH4vczVJIwe-815NEHsNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790292578103-e1p57pafdinmp6t73r8tncpv7frm4e9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
